@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+<!--     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>-->
+<script src="js/lib/angular.min.js"></script>    
+<script src="js/angular.js"></script>    
+ <title>Angular js</title>
+</head>
+<body ng-app = "prueba_json" ng-controller="estudianteCtrl"> 
+    <div class="container" >
+        <h1>Profesor</h1>
+        <h4>Nombre del profesor: {{teacher.nombre}}</h4>
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <section>
+                        <div class="card">
+                            <div class="card-body">
+                                <img ng-src="{{ teacher.foto }}" alt="" srcset="" style="width: 100%;">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-lg-9">
+                    <div class="card">
+                        <div class="card-body">
+                            {{ teacher.bio }}
+                            <br><br>
+                            <strong>Edad: </strong> {{ teacher.edad }} age
+                        </div>
+                        <button class="btn btn-outline-success btn-block" ng-click="editarProfesor()">Ediar</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row animated fadeIn" ng-hide = "cuadro">
+                <div class="col-lg-12">
+                  <div class="card">
+                      <div class="card-body">
+                          <br>
+                            <label for="" class="col-lg-12">
+                              Nombre del profesor
+                            <input type="text" name="" id="" placeholder="Introduzca Nombre" ng-model="editar.nombre" class="form-control">
+                            </label>
+                            <label for="" class="col-lg-12">
+                               Biografia
+                                <textarea name="" id="" class="form-control" placeholder="Introduzca Biografia" ng-model="editar.bio">
+                                </textarea>
+ 
+                            </label>
+                            <label for="" class="col-lg-12">
+                                    Edad
+                                     <input type="number" name="" id="" class="form-control" placeholder="Introduzca Biografia" ng-model="editar.edad">
+                            </label>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <button class="btn btn-outline-danger btn-block" type="button" ng-click="cancelarE()">
+                                        Cancelar
+                                    </button>
+                                </div>
+                                <div class="col-lg-6">
+                                    <button class="btn btn-outline-primary btn-block" type="button" ng-click="guardarData()">
+                                        Guardar
+                                    </button>
+                                </div>
+                            </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <br><br>
+    </div>
+
+
+
+    <script src="js/bootstrap/app.js"></script>
+    <script src="js/bootstrap/cloudflare.js"></script>
+    <script src="js/bootstrap/stackpath.js"></script>
+</body>
+</html>
