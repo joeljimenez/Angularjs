@@ -1,0 +1,13 @@
+<div class="col-lg-6" ng-repeat = "product in productos">
+        <div class="card" style="margin:10px">
+                <div class="card-title text-center">
+                    <p>{{ product.nombre }}</p>
+                </div>
+                <div class="card-body">
+                     <p class="text-justify"> {{ product.descripcion | lowercase }}</p>
+
+                     <hr>
+                     <h4>Precio : {{ product.precio }}</h4>
+                </div>
+            </div>
+  </div>
